@@ -26,6 +26,7 @@ export default function AddNote() {
 				className="note-textarea"
 				value={content}
 				onChange={(e) => setContent(e.target.value)}
+				placeholder="Add a note"
 				type="text"
 				id="note"
 				required
