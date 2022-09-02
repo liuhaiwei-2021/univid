@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const express = require("express");
 
 const router = express.Router();
@@ -51,15 +51,4 @@ router.post("/create", (req, res) => {
 });
 
 module.exports = router;
-=======
-import express from "express";
-import { getNotes, creatNote } from "../controllers/notes.js";
 
-const router = express.Router();
-
-router.get("/notes", getNotes);
-
-router.post("/note", creatNote);
-
-export default router;
->>>>>>> c20c1d27d1a5da1e6ea1aca2b3748cff4b3945c9

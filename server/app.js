@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -19,18 +19,6 @@ mongoose.connect(
 app.use(cors());
 app.use(bodyParser.json());
 
-=======
-import express from "express";
-import cors from "cors";
-import bodyParser from "body-parser";
-import notesRouter from "./routes/notes.js";
-
-var app = express();
-
-app.use(cors());
-app.use(bodyParser.json());
-
->>>>>>> c20c1d27d1a5da1e6ea1aca2b3748cff4b3945c9
 app.use("/", notesRouter);
 
 app.listen(3001, function () {
