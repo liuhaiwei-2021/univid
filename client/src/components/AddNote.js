@@ -1,21 +1,23 @@
+//NPM packages
 import { useState } from "react";
 import axios from "axios";
+//project files
 import "../styles/AddNote.css";
 
-function AddNote() {
+export default function AddNote() {
+	//local state
 	const [content, setContent] = useState("");
-	const [name, setName] = useState("name");
-	const [img, setImg] = useState(
-		"https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?cs=srgb&dl=women-s-white-and-black-button-up-collared-shirt-774909.jpg&fm=jpg"
-	);
+	const [name, setName] = useState("");
+	const [img, setImg] = useState("");
 
 	function handleClick(e) {
 		e.preventDefault();
+
 		let newNote = {
 			content,
 			user: { name: name, img: img },
 		};
-		console.log(newNote);
+
 		axios.post("http://localhost:3001/create", newNote);
 	}
 	return (
@@ -34,5 +36,3 @@ function AddNote() {
 		</form>
 	);
 }
-
-export default AddNote;

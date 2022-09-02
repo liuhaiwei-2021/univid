@@ -7,16 +7,21 @@ import "./App.css";
 import AddNote from "./components/AddNote";
 
 const App = () => {
+	// local state
 	const url = "http://localhost:3001/getnotes";
 	const [notes, setNotes] = useState([]);
 	const [error, setError] = useState(null);
 
 	useEffect(() => {
+		getNotes(url);
+	}, []);
+
+	function getNotes(url) {
 		axios
 			.get(url)
 			.then((res) => setNotes(res.data))
 			.catch((err) => setError(err.message));
-	}, []);
+	}
 
 	return (
 		<div className="App">

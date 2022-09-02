@@ -1,11 +1,15 @@
-
+//NPM packages
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const bodyParser = require("body-parser");
+
+//projecr files
 const notesRouter = require("./routes/notes.js");
 
 var app = express();
+
+//mongodb database
 const mongoURL = "mongodb+srv://haiwei:mongodb2022@cluster0.f2n998d.mongodb.net/univid";
 mongoose.connect(
 	mongoURL,
@@ -18,7 +22,6 @@ mongoose.connect(
 
 app.use(cors());
 app.use(bodyParser.json());
-
 app.use("/", notesRouter);
 
 app.listen(3001, function () {

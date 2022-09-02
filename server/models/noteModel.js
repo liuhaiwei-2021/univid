@@ -1,3 +1,4 @@
+//NPM packages
 const mongodb = require("mongoose");
 
 const notesSchema = {

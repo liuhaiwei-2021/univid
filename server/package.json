@@ -3,10 +3,7 @@
 	"version": "1.0.0",
 	"description": "",
 	"main": "app.js",
-<<<<<<< HEAD
-=======
-	"type": "module",
->>>>>>> c20c1d27d1a5da1e6ea1aca2b3748cff4b3945c9
+
 	"scripts": {
 		"start": "node app.js",
 		"test": "echo \"Error: no test specified\" && exit 1"
