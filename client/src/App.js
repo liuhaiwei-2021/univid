@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-
 import ReactPlayer from "react-player";
 import NoteCards from "./components/NoteCards";
 import logo from "./logo.png";
 import "./App.css";
+import AddNote from "./components/AddNote";
 
 const App = () => {
 	const url = "http://localhost:3001/getnotes";
@@ -37,6 +37,7 @@ const App = () => {
 				<div className="NotesContainer">
 					<div className="NotesContainerSection">
 						<NoteCards notes={notes} />
+						<AddNote />
 						{error && <h1>Something happened! We will fix it asap!</h1>}
 						<span>
 							The main task is to fill this area with the notes which you can fetch
