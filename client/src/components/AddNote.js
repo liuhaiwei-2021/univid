@@ -21,7 +21,12 @@ export default function AddNote() {
 		axios.post("http://localhost:3001/create", newNote);
 	}
 	return (
-		<form>
+		<form className="add-form">
+			<img
+				className="user-img"
+				src="https://static-cdn.sr.se/images/2071/64a598d6-1b11-4828-8a64-dd79cab3d7f8.jpg"
+				alt="user-img"
+			/>
 			<textarea
 				className="note-textarea"
 				value={content}
@@ -31,8 +36,8 @@ export default function AddNote() {
 				id="note"
 				required
 			/>
-			<button onClick={handleClick} className="comment-button">
-				Add Note
+			<button onClick={handleClick} className="commit-button">
+				Commit
 			</button>
 		</form>
 	);
