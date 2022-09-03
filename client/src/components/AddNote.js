@@ -15,10 +15,21 @@ export default function AddNote() {
 
 		let newNote = {
 			content,
-			user: { name: name, img: img },
+			user: { name, img },
 		};
 
-		axios.post("http://localhost:3001/create", newNote);
+		const sendPostRequest = async (url, object) => {
+			try {
+				const response = await axios.post(url, object);
+				console.log(response.data);
+			} catch (err) {
+				console.error(err);
+			}
+		};
+
+		sendPostRequest("http://localhost:3001/create", newNote);
+
+		setContent("");
 	}
 	return (
 		<form className="add-form">
