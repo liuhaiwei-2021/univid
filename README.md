@@ -1,7 +1,7 @@
 # A MERN(MongoDB, Express, React and NodeJS) project. 
 
-1. read all the notes in MongoDB and show on the page.
-2. add a new note.
+1. Read all the notes in MongoDB and show on the page.
+2. Add a new note.
 
 # CodeTest
 
