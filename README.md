@@ -1,7 +1,7 @@
 # A MERN(MongoDB, Express, React and NodeJS) project. 
 
-1. Read all the notes in MongoDB and show on the page.
-2. Add a new note.
+1. Read all the notes in MongoDB and show them on the page. use axios get all the notes. 
+2. Add a new note. Simulate the user state is logged in, so pass the note.content to backend and save in database. 
 
 # CodeTest
 
