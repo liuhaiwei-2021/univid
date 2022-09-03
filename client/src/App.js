@@ -14,7 +14,7 @@ const App = () => {
 
 	useEffect(() => {
 		getNotes(url);
-	}, []);
+	}, [notes]);
 
 	function getNotes(url) {
 		axios

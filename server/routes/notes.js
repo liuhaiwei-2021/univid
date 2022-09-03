@@ -18,7 +18,7 @@ router.post("/create", (req, res) => {
 	const newNote = new Note({
 		content,
 		user: {
-			name: "defalt name",
+			name: "Admin",
 			img: "https://static-cdn.sr.se/images/2071/64a598d6-1b11-4828-8a64-dd79cab3d7f8.jpg",
 		},
 	});
