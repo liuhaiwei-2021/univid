@@ -23,7 +23,7 @@ router.post("/create", (req, res) => {
 		},
 	});
 	newNote.save();
-	res.send("note added succefully");
+	res.send("Note added succefully");
 });
 
 module.exports = router;

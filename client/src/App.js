@@ -16,11 +16,14 @@ const App = () => {
 		getNotes(url);
 	}, [notes]);
 
-	function getNotes(url) {
-		axios
-			.get(url)
-			.then((res) => setNotes(res.data))
-			.catch((err) => setError(err.message));
+	async function getNotes(url) {
+		try {
+			const response = await axios.get(url);
+			setNotes(response.data);
+		} catch (err) {
+			console.error(err);
+			setError(err.message);
+		}
 	}
 
 	return (
@@ -44,23 +47,6 @@ const App = () => {
 						<NoteCards notes={notes} />
 						<AddNote />
 						{error && <h1>Something happened! We will fix it asap!</h1>}
-						<span>
-							The main task is to fill this area with the notes which you can fetch
-							from
-						</span>{" "}
-						<a
-							href="http://localhost:3001/getnotes"
-							target="_blank"
-							rel="noopener noreferrer">
-							<b>http://localhost:3001/getnotes</b>
-						</a>
-					</div>
-					<div className="NotesContainerSection">
-						If you manage do that in time, please style the notes.
-					</div>
-					<div className="NotesContainerSection">
-						If you even manage to do that in time, start working on a way to add new
-						notes.
 					</div>
 				</div>
 			</div>
