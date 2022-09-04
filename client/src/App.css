@@ -1,81 +1,98 @@
 .App {
-  min-height: 100vh;
+	min-height: 100vh;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 
-  background-image: linear-gradient(
-    to bottom,
-    rgba(138, 195, 240, 0.2),
-    rgba(138, 195, 240, 0.1)
-  );
+	background-image: linear-gradient(
+		to bottom,
+		rgba(138, 195, 240, 0.2),
+		rgba(138, 195, 240, 0.1)
+	);
 }
 
 .AppLogo {
-  position: absolute;
-  bottom: 2vmin;
-  right: 2vmin;
-  height: 6vmin;
-  pointer-events: none;
-  user-select: none;
+	position: absolute;
+	bottom: 2vmin;
+	right: 2vmin;
+	height: 6vmin;
+	pointer-events: none;
+	user-select: none;
 
-  padding: 1vmin;
-  border-radius: 5px;
+	padding: 1vmin;
+	border-radius: 5px;
 }
 
 .MainRow {
-  position: relative;
-  display: flex;
-  align-items: center;
+	position: relative;
+	display: flex;
+	align-items: center;
 
-  justify-content: space-around;
+	justify-content: space-around;
 
-  width: 90%;
+	width: 90%;
 }
 
 .VideoContainer {
-  position: relative;
-  width: 48%;
-  border-radius: 10px;
-  overflow: hidden;
-  background-color: black;
+	position: relative;
+	width: 48%;
+	border-radius: 10px;
+	overflow: hidden;
+	background-color: black;
 
-  padding-bottom: 27%;
+	padding-bottom: 27%;
 }
 
 .VideoCover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 1;
 }
 
 .ReactPlayer {
-  position: absolute;
-  top: 0;
-  left: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
 }
 
 .NotesContainer {
-  width: 48%;
+	width: 48%;
 
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  text-align: center;
-
-  font-size: 2vmin;
-
-  padding: 10px;
-  background-color: white;
-  border-radius: 10px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	font-size: 2vmin;
+	padding: 10px;
+	background-color: white;
+	border-radius: 10px;
 }
 
 .NotesContainerSection {
-  padding: 10px;
+	padding: 10px;
+}
+
+.add-btn {
+	display: inline-block;
+	padding: 0.35em 1.2em;
+	border-radius: 1em;
+	width: 60%;
+	height: 48px;
+	text-decoration: none;
+	font-weight: 300;
+	color: #000000;
+	background-color: #f6f8fa;
+	transition: all 0.2s;
+	font-size: 16px;
+	border-radius: 8px;
+	margin-top: 16px;
+}
+
+.add-btn:hover {
+	background: rgba(0, 0, 0, 5%);
 }
