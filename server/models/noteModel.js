@@ -4,8 +4,8 @@ const mongodb = require("mongoose");
 const notesSchema = {
 	content: { type: String, required: true },
 	user: {
-		name: { type: String },
-		img: { type: String },
+		name: { type: String, required: true },
+		img: { type: String, required: true },
 	},
 };
 

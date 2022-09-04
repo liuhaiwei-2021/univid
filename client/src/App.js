@@ -4,10 +4,12 @@ import ReactPlayer from "react-player";
 import NoteCards from "./components/NoteCards";
 import logo from "./logo.png";
 import "./App.css";
+import Modal from "./components/Modal";
 import AddNote from "./components/AddNote";
 
 const App = () => {
 	// local state
+	const [isOpen, setIsOpen] = useState(false);
 	const url = "http://localhost:3001/getnotes";
 	const [notes, setNotes] = useState([]);
 	const [error, setError] = useState(null);
@@ -44,8 +46,15 @@ const App = () => {
 				</div>
 				<div className="NotesContainer">
 					<div className="NotesContainerSection">
+						<Modal open={isOpen} onClose={() => setIsOpen(false)}>
+							<AddNote />
+						</Modal>
 						<NoteCards notes={notes} />
-						<AddNote />
+
+						<button className="add-btn" onClick={() => setIsOpen(true)}>
+							Add a note
+						</button>
+
 						{error && <h1>Something happened! We will fix it asap!</h1>}
 					</div>
 				</div>
