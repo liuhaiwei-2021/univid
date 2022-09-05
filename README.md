@@ -3,7 +3,7 @@
 1. Read all the notes in MongoDB and show them on the page. use axios get all the notes. 
 2. Add a new note. open a new form to add a new data. 
 
-<img width="1380" alt="Screenshot 2022-09-04 at 21 38 32" src="https://user-images.githubusercontent.com/80680154/188330870-3b8e42ac-e86d-4dfc-969a-788328f1949b.png"><img width="1297" alt="Screenshot 2022-09-04 at 21 36 44" src="https://user-images.githubusercontent.com/80680154/188330872-693e2aea-0ab5-445f-8456-6d6dfc08d230.png">
+<img width="1380" alt="Screenshot 2022-09-04 at 21 38 32" src="https://user-images.githubusercontent.com/80680154/188330870-3b8e42ac-e86d-4dfc-969a-788328f1949b.png">
 
 # CodeTest
 
