@@ -4,7 +4,7 @@ import axios from "axios";
 //project files
 import "../styles/AddNote.css";
 
-export default function AddNoteForm() {
+export default function AddNoteForm({ setIsOpen }) {
 	//local state
 	const [error, setError] = useState(null);
 	const [content, setContent] = useState("");
@@ -31,6 +31,7 @@ export default function AddNoteForm() {
 		console.log(newNote);
 
 		sendPostRequest("http://localhost:3001/create", newNote);
+		setIsOpen(false);
 		setName("");
 		setImg("");
 		setContent("");

@@ -47,7 +47,7 @@ const App = () => {
 				<div className="NotesContainer">
 					<div className="NotesContainerSection">
 						<Modal open={isOpen} onClose={() => setIsOpen(false)}>
-							<AddNoteForm />
+							<AddNoteForm setIsOpen={setIsOpen} />
 						</Modal>
 						<NoteCards notes={notes} />
 
