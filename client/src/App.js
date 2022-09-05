@@ -5,7 +5,7 @@ import NoteCards from "./components/NoteCards";
 import logo from "./logo.png";
 import "./App.css";
 import Modal from "./components/Modal";
-import AddNote from "./components/AddNote";
+import AddNoteForm from "./components/AddNoteForm";
 
 const App = () => {
 	// local state
@@ -47,7 +47,7 @@ const App = () => {
 				<div className="NotesContainer">
 					<div className="NotesContainerSection">
 						<Modal open={isOpen} onClose={() => setIsOpen(false)}>
-							<AddNote />
+							<AddNoteForm />
 						</Modal>
 						<NoteCards notes={notes} />
 
