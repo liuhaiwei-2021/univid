@@ -32,15 +32,6 @@ export default function AddNoteForm({ setIsOpen }) {
 
 		sendPostRequest("http://localhost:3001/create", newNote);
 		setIsOpen(false);
-		setName("");
-		setImg("");
-		setContent("");
-	}
-
-	function handleCancel() {
-		setName("");
-		setImg("");
-		setContent("");
 	}
 
 	return (
