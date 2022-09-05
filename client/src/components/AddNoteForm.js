@@ -4,7 +4,7 @@ import axios from "axios";
 //project files
 import "../styles/AddNote.css";
 
-export default function AddNote() {
+export default function AddNoteForm() {
 	//local state
 	const [error, setError] = useState(null);
 	const [content, setContent] = useState("");
@@ -35,6 +35,13 @@ export default function AddNote() {
 		setImg("");
 		setContent("");
 	}
+
+	function handleCancel() {
+		setName("");
+		setImg("");
+		setContent("");
+	}
+
 	return (
 		<form className="add-form" onSubmit={handleClick}>
 			{error && <h1>Something happened! We will fix it asap!</h1>}
@@ -64,7 +71,6 @@ export default function AddNote() {
 			/>
 
 			<button className="commit-btn">Commit</button>
-			<button className="cancel-btn">Cancel</button>
 		</form>
 	);
 }
